@@ -1,2 +1,2 @@
 # glowstoneplusplus.github.io
-The GlowstonePlusPlus website
+The GlowstonePlusPlus [website](https://glowstoneplusplus.github.io/)
