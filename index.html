@@ -1,159 +1,75 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Glowstone++ | Home</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/GlowstonePlusPlus/GlowstonePlusPlus/master/etc/logo/logo.png" type="image/png"/>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/glowstone.css" rel="stylesheet">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Glowstone++</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600' rel='stylesheet' type='text/css'>
+    <style>
+     body {
+     	font-family: 'Source Sans Pro', sans-serif;
+     	font-weight: 300
+     }
+    </style>
   </head>
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <span class="light">GLOW</span>STONE<span class="light">++</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#why">Why</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#credits">Thanks</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="https://circleci.com/gh/GlowstonePlusPlus/GlowstonePlusPlus/tree/master">Download</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus">Code</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/issues">Issues</a>
-                    </li>
-                    <li>
-                        <a href="https://hub.spigotmc.org/javadocs/bukkit/">Javadocs</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki">Wiki</a>
-                    </li>
-                    <li>
-                        <a href="https://gitter.im/GlowstonePlusPlus/GlowstonePlusPlus">Chat</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <body>
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+<div class="container">
+  <a class="navbar-brand" href="#">Glowstone++</a>
+  <ul class="nav navbar-nav pull-right">
+    <li class="nav-item">
+      <a class="nav-link" href="https://gitter.im/GlowstonePlusPlus/GlowstonePlusPlus">Chat</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki">Wiki</a>
+    </li>
+  </ul>
+</div>
+</nav>
+    <header class="jumbotron jumbotron-fluid" style="background: #FF6F00;color: #fff;height:100%;margin-top:54px">
+<div class="container">
+	    <h1>Minecraft's future is bright.</h1>
+	    <p class="lead"><b>Meet Glowstone++.</b> It's open, fast, and compatible.</p>
+	    <p>Glowstone++ is completely open source and doesn't rely on any of Mojang's code. So, we're free to develop for your needs, and you're free to change it however you want.</p>
+	    <a href="https://drone.io/github.com/GlowstonePlusPlus/GlowstonePlusPlus/files/target/glowstone++-1.8.8-SNAPSHOT.jar" class="btn btn-warning"><i class="fa fa-download"></i> Download for 1.8.8</a>
+		<br>
+		<div>
+		<p>
+			<a style="color:#fff" href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki/Installation">INSTRUCTIONS</a>
+                 	|
+			<a style="color:#fff" href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus">SOURCE</a>
+                 	|
+			<a style="color:#fff" href="https://drone.io/github.com/GlowstonePlusPlus/GlowstonePlusPlus">BUILDS</a>
+		</p>
+		</div>
+</div>
+	</header>
+<div class="container">
+	<section class="card">
+		<div class="card-block">
+		    <h2 class="card-title">The APIs you know and love</h2>
+		    <p class="card-text"><span class="lead">Just because Glowstone++ is original doesn't mean it can't be familiar.</span><br>
+			Use or code Bukkit plugins and they'll work natively with Glowstone++, and enjoy first class Bukkit2Sponge support for your Sponge powered plugins.</p>
+	  	</div>
+	</section>
+	<section class="card">
+		<div class="card-block">
+		    <h2 class="card-title">Simplicity is the mother of performance</h2>
+		    <p class="card-text"><span class="lead">Glowstone++'s simplicity affords it a performance improvement over CraftBukkit and other servers.</span><br>
+			By design, our code is simple and doesn't have to go through loops and bounds to work around the vanilla Minecraft server to improve performance or functionality.</p>
+	  	</div>
+	</section>
+</div>
+	<footer class="container">
+	<p>Made with ♥ by some nerds.</p>
+	<p>Special thanks to <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus#credits">these folks</a>.</p>
+	<p>Glowstone++ and this website are licensed under the MIT license.</p>
+	</footer>
 
-
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <h1>Minecraft's future is</h1>
-                      <h1 id="bright" style="color: #ffe082;">bright<a href="#disclaimer">*</a></h1><br>
-                        <a href="https://drone.io/github.com/GlowstonePlusPlus/GlowstonePlusPlus/files" class="btn btn-default page-scroll">
-                            <i class="fa fa-download"></i> Get Glowstone++
-                        </a>
-                      <p><small><a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus#building">build from source</a> | <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki/Installation">instructions</a></small></p>
-                      <a href="#why" class="btn btn-circle page-scroll"><i class="fa fa-angle-double-down animated"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="why" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <img src="https://raw.githubusercontent.com/GlowstonePlusPlus/GlowstonePlusPlus/master/etc/logo/logo.png"/>
-                <h2>Glowstone++</h2>
-                <hr>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <i class="fa fa-code fa-5x" style="color: #757575;"></i><br><br>
-                    <h3>Open Source</h3>
-                    <p>
-                        Glowstone++'s code is completely original and licensed under the permissive
-                        MIT license. There is no reliance on decompiled code.
-                    </p>
-                  </div>
-                  <div class="col-lg-4">
-                    <i class="fa fa-leaf fa-5x" style="color: #8bc34a;"></i><br><br>
-                    <h3>Lightweight</h3>
-                    <p>
-                        Simplicity breeds performance. Glowstone++ is built with both of these in
-                        mind, making it suited for situations where vanilla game features aren't needed.
-                    </p>
-                  </div>
-                  <div class="col-lg-4">
-                    <i class="fa fa-heart fa-5x" style="color: #e91e63;"></i><br><br>
-                    <h3>Mature API</h3>
-                    <p>
-                        Use all the APIs you already know and love. Glowstone++ supports plugins already written
-                        for Bukkit and Sponge.
-                    </p>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section text-center">
-        <div class="about-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>About Glowstone++</h2>
-                    <p class="text-justify">
-                    Glowstone++ is a lightweight, from scratch, open source 
-                    Minecraft server written in Java that supports plugins 
-					          written for the Bukkit and Sponge APIs. 
-                    The main goals of the project are to provide a lightweight 
-                    implementation of the Minecraft server where 
-                    exact vanilla functionality is not needed or higher 
-                    performance is desired than the official software can 
-                    deliver. Glowstone++ makes use of a thread-per-world model 
-                    and performs synchronization only when necessitated by APIs. 
-                    </p>
-                    <div id="disclaimer" style="padding-top: 70px;">
-                        <p>Glowstone++ is an experimental work in progress, and is not ready for production servers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="credits" class="container content-section text-center">
-      <h2>Special thanks to</h2>
-  	    <a href="http://wiki.vg/">The Minecraft Coalition</a> and <a href="https://github.com/mcdevs">#mcdevs</a> - protocol and file formats research.<br>
-  	    <a href="https://bukkit.org/">The Bukkit team</a> for their outstandingly well-designed plugin API.<br>
-  	    <a href="https://www.spigotmc.org/">The SpigotMC team</a> for updating and enhancing the Bukkit plugin API.<br>
-  	    <a href="https://www.spongepowered.org/">The SpongePowered team</a> for creating the Sponge API<br>
-  	    <a href="https://github.com/trustin">Trustin Lee</a> - author of the <a href="http://netty.io/">Netty</a> library.<br>
-  	    <a href="https://github.com/grahamedgecombe/">Graham Edgecombe</a> - author of the original <a href="https://github.com/grahamedgecombe/lightstone">Lightstone</a>.<br>
-  	    <a href="https://github.com/SpaceManiac">Tad Hardesty</a> and <a href="https://github.com/GlowstoneMC/Glowstone/graphs/contributors">all the contributors</a> to Glowstone.<br>
-  	    All the people behind <a href="https://maven.apache.org/team-list.html">Maven</a> and <a href="https://java.net/people">Java</a>.<br>
-  	    <a href="http://notch.tumblr.com/">Notch</a> and <a href="https://mojang.com/about/">Mojang</a> - for making such an awesome game in the first place!
-    </section>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/glowstone.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.j"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
   </body>
 </html>
