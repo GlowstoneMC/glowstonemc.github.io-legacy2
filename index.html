@@ -1,75 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Glowstone++</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600'
+          rel='stylesheet' type='text/css'>
     <style>
-     body {
-     	font-family: 'Source Sans Pro', sans-serif;
-     	font-weight: 300
-     }
-    </style>
-  </head>
-  <body>
-<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
-<div class="container">
-  <a class="navbar-brand" href="#">Glowstone++</a>
-  <ul class="nav navbar-nav pull-right">
-    <li class="nav-item">
-      <a class="nav-link" href="https://gitter.im/GlowstonePlusPlus/GlowstonePlusPlus">Chat</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki">Wiki</a>
-    </li>
-  </ul>
-</div>
-</nav>
-    <header class="jumbotron jumbotron-fluid" style="background: #FF6F00;color: #fff;height:100%;margin-top:54px">
-<div class="container">
-	    <h1>Minecraft's future is bright.</h1>
-	    <p class="lead"><b>Meet Glowstone++.</b> It's open, fast, and compatible.</p>
-	    <p>Glowstone++ is a completely open source Minecraft server that doesn't rely on any of Mojang's code. So, we're free to develop for your needs, and you're free to change it however you want.</p>
-	    <a href="https://bamboo.gserv.me/browse/GSPP-SRV/latestSuccessful/artifact/shared/Server-JAR/glowstone%2B%2B-1.8.9-SNAPSHOT.jar" class="btn btn-warning"><i class="fa fa-download"></i> Download for 1.8.9</a>
-		<br>
-		<div>
-		<p>
-			<a style="color:#fff" href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki/Installation">INSTRUCTIONS</a>
-                 	|
-			<a style="color:#fff" href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus">SOURCE</a>
-                 	|
-			<a style="color:#fff" href="https://bamboo.gserv.me/browse/GSPP-SRV">BUILDS</a>
-		</p>
-		</div>
-</div>
-	</header>
-<div class="container">
-	<section class="card">
-		<div class="card-block">
-		    <h2 class="card-title">The APIs you know and love</h2>
-		    <p class="card-text"><span class="lead">Just because Glowstone++ is original doesn't mean it can't be familiar.</span><br>
-			Use or code Bukkit plugins and they'll work natively with Glowstone++, and enjoy first class Bukkit2Sponge support for your Sponge powered plugins.</p>
-	  	</div>
-	</section>
-	<section class="card">
-		<div class="card-block">
-		    <h2 class="card-title">Simplicity is the mother of performance</h2>
-		    <p class="card-text"><span class="lead">Glowstone++'s simplicity affords it a performance improvement over CraftBukkit and other servers.</span><br>
-			By design, our code is simple and doesn't have to go through hoops and bounds to work around the vanilla Minecraft server to improve performance or functionality.</p>
-	  	</div>
-	</section>
-</div>
-	<footer class="container">
-	<p>Made with ♥ by some nerds.</p>
-	<p>Special thanks to <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus#credits">these folks</a>.</p>
-	<p>Glowstone++ and this website are licensed under the MIT license.</p>
-	</footer>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+        }
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.j"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-  </body>
+        .jumbotron {
+            padding-top: 1em;
+        }
+
+        #builds-table {
+            display: none;
+        }
+
+        #loading-icon {
+            display: block;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Glowstone++</a>
+        <ul class="nav navbar-nav pull-right">
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="http://webchat.esper.net/?nick=webchat-.....&channels=glowstone++&prompt=0">IRC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="https://gitter.im/GlowstonePlusPlus/GlowstonePlusPlus">Gitter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki">Wiki</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="jumbotron jumbotron-fluid"
+        style="background: #FF6F00;color: #fff;height:100%;margin-top:54px">
+    <div class="container">
+        <h1>Minecraft's future is bright.</h1>
+        <p class="lead"><b>Meet Glowstone++.</b> It's open, fast, and
+            compatible.</p>
+        <p>Glowstone++ is a completely open-source Minecraft server that
+            doesn't rely on any of Mojang's code - meaning we're free to
+            develop for
+            your needs, and you're free to change it however you want.</p>
+        <a href="https://bamboo.gserv.me/browse/GSPP-SRV/latestSuccessful/artifact/shared/Server-JAR/glowstone%2B%2B-1.8.9-SNAPSHOT.jar"
+           class="btn btn-primary"><i class="fa fa-download"></i> Download for
+            1.8.9 <small>Experimental</small></a>
+
+        <div class="pull-right">
+            <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki/Installation"
+               class="btn btn-success">
+                <i class="fa fa-book"></i> Instructions</a>
+            <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus"
+               class="btn btn-secondary">
+                <i class="fa fa-code-fork"></i> Source</a>
+            <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
+               class="btn btn-secondary">
+                <i class="fa fa-refresh"></i> CI Server</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <section class="card">
+        <div class="card-block">
+            <h2 class="card-title">The APIs you know and love</h2>
+            <p class="card-text">
+                <span class="lead">Just because Glowstone++ is original doesn't mean it can't be familiar.</span>
+                <br/>
+                Use or code Bukkit plugins and they'll work natively with
+                Glowstone++, and enjoy first-class Bukkit2Sponge support for
+                your Sponge powered plugins.
+            </p>
+        </div>
+    </section>
+    <section class="card">
+        <div class="card-block">
+            <h2 class="card-title">Simplicity is the mother of performance</h2>
+            <p class="card-text">
+                <span class="lead">Glowstone++'s simplicity affords it a performance improvement over CraftBukkit and other servers.</span>
+                <br/>
+                By design, our code is simple and doesn't have to jump through
+                hoops
+                to work around the official Minecraft server in order to
+                improve
+                performance or functionality.
+            </p>
+        </div>
+    </section>
+</div>
+
+<hr/>
+
+<div class="container">
+    <div class="alert alert-warning" role="alert">
+        <strong>Development builds</strong><br/>
+        Note that these builds are for development or testing purposes only,
+        and we do not recommend that you use them in production.
+    </div>
+</div>
+
+<noscript>
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+            <strong>Please enable JavaScript</strong><br/>
+            This is a one-page static site, so we require JavaScript to generate
+            the table of development builds and commit information below. If you
+            would rather head to another page than enable JavaScript, please
+            click on the "CI Server" button in the upper section of the page.
+        </div>
+    </div>
+</noscript>
+
+<div class="container" id="dev-builds">
+    <i class="fa fa-spinner fa-spin fa-5x" id="loading-icon"></i>
+</div>
+
+<footer class="bg-inverse">
+    <div class="container">
+        <br/>
+        <p>
+            <small>Made with ♥ by some nerds. Our project is licensed under the
+                MIT license. Glowstone++ would not be possible without <a
+                        href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus#credits">these
+                    folks</a> &mdash; thanks for your time and passion!
+            </small>
+        </p>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+
+<script>
+    try {
+        $.getJSON("https://bamboo.gserv.me/rest/api/latest/result/GSPP-SRV.json?expand=results.result.artifacts",
+                function (data) {
+                    var content = "";
+                    var state;
+                    content += '<table class="table table-hover table-responsive" id="builds-table">';
+                    content += '<thead class="thead-inverse"><tr>' +
+                            '<th></th>' +
+                            '<th><i class="fa fa-question-circle"></i></th>' +
+                            '<th style="width: 11em;">Date (EST)</th>' +
+                            '<th colspan="2">Reason</th>' +
+                            '<th><i class="fa fa-github"></i></th>' +
+                            '<th><i class="fa fa-download"></i></th>' +
+                            '</tr></thead><tbody>';
+                    $.each(data.results.result, function (i, result) {
+                        if (i > 16) {
+                            return;
+                        }
+                        state = result.state.toLowerCase();
+                        content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/CHAT-PLUG-' + result.number + '">' + result.number + '</a></td><td>';
+                        if (state == "successful") {
+                            content += '<i class="fa fa-check fa-stack" style="color: green" title="' + result.state + '"></i>';
+                        } else if (state == "failed") {
+                            content += '<i class="fa fa-times fa-stack" style="color: red" title="' + result.state + '"></i>';
+                        } else {
+                            content += '<i class="fa fa-question fa-stack" style="color: blue" title="' + result.state + '"></i>';
+                        }
+                        content += '<td>' + result.prettyBuildCompletedTime + '</td>';
+                        if (result.buildReason.indexOf("Changes") > -1) {
+                            content += '<td>' + result.buildReason + '</td>';
+                            content += '<td id="' + result.vcsRevisionKey + '"><i class="fa fa-spinner fa-spin" class="inner-loader"></i></td>';
+                            $.getJSON(
+                                    "https://api.github.com/repos/GlowstonePlusPlus/GlowstonePlusPlus/commits/" + result.vcsRevisionKey,
+                                    function (data) {
+                                        console.log(data);
+                                        var lines = data.commit.message.split("\n");
+                                        $("#" + data.sha + " .inner-loader").hide();
+                                        if (lines.length > 1) {
+                                            $("#" + data.sha).html(lines[0] + ' <small><em>+ ' + (lines.length - 1) + ' lines</em></small>');
+                                        } else {
+                                            $("#" + data.sha).html(lines[0]);
+                                        }
+                                    }
+                            );
+                        } else {
+                            content += '<td colspan="2">' + result.buildReason + '</td>';
+                        }
+                        content += '<td>';
+                        content += '<a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
+                        content += '</td><td>';
+                        if (result.artifacts.size > 0) {
+                            content += '<a href="';
+                            content += result.artifacts.artifact[0].link.href;
+                            content += '"><i class="fa fa-download" style="color: green"></i></a>';
+                        } else {
+                            content += '<i class="fa fa-download" style="color: red"></i>';
+                        }
+                        content += '</td></tr>';
+                    });
+                    content += '</tbody>';
+                    content += '<thead class="thead-inverse"><tr>' +
+                            '<th></th>' +
+                            '<th><i class="fa fa-question-circle"></i></th>' +
+                            '<th style="width: 11em;">Date (EST)</th>' +
+                            '<th colspan="2">Reason</th>' +
+                            '<th><i class="fa fa-github"></i></th>' +
+                            '<th><i class="fa fa-download"></i></th>' +
+                            '</tr></thead><tbody></table>';
+
+                    $(content).appendTo("#dev-builds");
+                    $("#loading-icon").fadeOut(300, function () {
+                        $("#builds-table").fadeIn(300)
+                    });
+
+                    $(function () {
+                        $('[data-toggle="tooltip"]').tooltip()
+                    });
+                }
+        );
+    } catch (e) {
+        $("<p>" + e.message + "</p>").appendTo("#builds-error");
+    }
+</script>
+
+</body>
 </html>
