@@ -185,12 +185,11 @@
                         if (i > 16) {
                             return;
                         }
-                        state = result.state.toLowerCase();
-                        content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/CHAT-PLUG-' + result.number + '">' + result.number + '</a></td><td>';
+                        content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/CHAT-PLUG-' + result.number + '">' + result.number + '</a></td>';
                         content += '<td>' + result.prettyBuildCompletedTime + '</td>';
+                        content += '';
+                        content += '<td><a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a></td>';
                         content += '<td>';
-                        content += '<a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
-                        content += '</td><td>';
                         if (result.artifacts.size > 0) {
                             content += '<a href="';
                             content += result.artifacts.artifact[0].link.href;
