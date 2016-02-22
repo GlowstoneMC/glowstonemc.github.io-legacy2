@@ -72,20 +72,28 @@
             doesn't rely on any of Mojang's code - meaning we're free to
             develop for
             your needs, and you're free to change it however you want.</p>
-        <a href="https://bamboo.gserv.me/browse/GSPP-SRV/latestSuccessful/artifact/shared/Server-JAR/glowstone%2B%2B-1.8.9-SNAPSHOT.jar"
-           class="btn btn-primary"><i class="fa fa-download"></i> Download for
-            1.8.9 <small>Experimental</small></a>
-
-        <div class="pull-right">
-            <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki/Installation"
-               class="btn btn-success">
-                <i class="fa fa-book"></i> Instructions</a>
-            <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus"
-               class="btn btn-secondary">
-                <i class="fa fa-code-fork"></i> Source</a>
-            <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
-               class="btn btn-secondary">
-                <i class="fa fa-refresh"></i> CI Server</a>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="https://bamboo.gserv.me/browse/GSPP-SRV/latestSuccessful/artifact/shared/Server-JAR/glowstone%2B%2B-1.8.9-SNAPSHOT.jar"
+                   class="btn btn-primary"><i class="fa fa-download"></i> Download for
+                    1.8.9 <small>Experimental</small>
+                </a>
+            </div>
+    
+            <div class="col-md-6">
+                <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/wiki/Installation"
+                   class="btn btn-success">
+                    <i class="fa fa-book"></i> Instructions
+                </a>
+                <a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus"
+                   class="btn btn-secondary">
+                    <i class="fa fa-code-fork"></i> Source
+                </a>
+                <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
+                   class="btn btn-secondary">
+                    <i class="fa fa-refresh"></i> CI Server
+                </a>
+            </div>
         </div>
     </div>
 </header>
@@ -169,9 +177,7 @@
                     content += '<table class="table table-hover table-responsive" id="builds-table">';
                     content += '<thead class="thead-inverse"><tr>' +
                             '<th></th>' +
-                            '<th><i class="fa fa-question-circle"></i></th>' +
                             '<th style="width: 11em;">Date (EST)</th>' +
-                            '<th colspan="2">Reason</th>' +
                             '<th><i class="fa fa-github"></i></th>' +
                             '<th><i class="fa fa-download"></i></th>' +
                             '</tr></thead><tbody>';
@@ -181,33 +187,7 @@
                         }
                         state = result.state.toLowerCase();
                         content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/CHAT-PLUG-' + result.number + '">' + result.number + '</a></td><td>';
-                        if (state == "successful") {
-                            content += '<i class="fa fa-check fa-stack" style="color: green" title="' + result.state + '"></i>';
-                        } else if (state == "failed") {
-                            content += '<i class="fa fa-times fa-stack" style="color: red" title="' + result.state + '"></i>';
-                        } else {
-                            content += '<i class="fa fa-question fa-stack" style="color: blue" title="' + result.state + '"></i>';
-                        }
                         content += '<td>' + result.prettyBuildCompletedTime + '</td>';
-                        if (result.buildReason.indexOf("Changes") > -1) {
-                            content += '<td>' + result.buildReason + '</td>';
-                            content += '<td id="' + result.vcsRevisionKey + '"><i class="fa fa-spinner fa-spin" class="inner-loader"></i></td>';
-                            $.getJSON(
-                                    "https://api.github.com/repos/GlowstonePlusPlus/GlowstonePlusPlus/commits/" + result.vcsRevisionKey,
-                                    function (data) {
-                                        console.log(data);
-                                        var lines = data.commit.message.split("\n");
-                                        $("#" + data.sha + " .inner-loader").hide();
-                                        if (lines.length > 1) {
-                                            $("#" + data.sha).html(lines[0] + ' <small><em>+ ' + (lines.length - 1) + ' lines</em></small>');
-                                        } else {
-                                            $("#" + data.sha).html(lines[0]);
-                                        }
-                                    }
-                            );
-                        } else {
-                            content += '<td colspan="2">' + result.buildReason + '</td>';
-                        }
                         content += '<td>';
                         content += '<a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
                         content += '</td><td>';
@@ -223,9 +203,7 @@
                     content += '</tbody>';
                     content += '<thead class="thead-inverse"><tr>' +
                             '<th></th>' +
-                            '<th><i class="fa fa-question-circle"></i></th>' +
                             '<th style="width: 11em;">Date (EST)</th>' +
-                            '<th colspan="2">Reason</th>' +
                             '<th><i class="fa fa-github"></i></th>' +
                             '<th><i class="fa fa-download"></i></th>' +
                             '</tr></thead><tbody></table>';
