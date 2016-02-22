@@ -192,9 +192,9 @@
                         if (result.artifacts.size > 0) {
                             content += '<a href="';
                             content += result.artifacts.artifact[0].link.href;
-                            content += '"><i class="fa fa-download" style="color: green"></i></a>';
+                            content += '"><i class="fa fa-download" style="color: green" title="' + result.state + '"></i></a>';
                         } else {
-                            content += '<i class="fa fa-download" style="color: red"></i>';
+                            content += '<i class="fa fa-download" style="color: red" title="' + result.state + '"></i>';
                         }
                         content += '</td></tr>';
                     });
