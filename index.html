@@ -174,10 +174,12 @@
                 function (data) {
                     var content = "";
                     var state;
-                    content += '<div class="table-responsive"><table class="table table-hover" id="builds-table">';
+                    content += '<table class="table table-hover table-responsive" id="builds-table">';
                     content += '<thead class="thead-inverse"><tr>' +
                             '<th></th>' +
+                            '<th><i class="fa fa-question-circle"></i></th>' +
                             '<th style="width: 11em;">Date (EST)</th>' +
+                            '<th colspan="2">Reason</th>' +
                             '<th><i class="fa fa-github"></i></th>' +
                             '<th><i class="fa fa-download"></i></th>' +
                             '</tr></thead><tbody>';
@@ -185,32 +187,60 @@
                         if (i > 16) {
                             return;
                         }
-                        content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/CHAT-PLUG-' + result.number + '">' + result.number + '</a></td>';
+                        state = result.state.toLowerCase();
+                        content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/CHAT-PLUG-' + result.number + '">' + result.number + '</a></td><td>';
+                        if (state == "successful") {
+                            content += '<i class="fa fa-check fa-stack" style="color: green" title="' + result.state + '"></i>';
+                        } else if (state == "failed") {
+                            content += '<i class="fa fa-times fa-stack" style="color: red" title="' + result.state + '"></i>';
+                        } else {
+                            content += '<i class="fa fa-question fa-stack" style="color: blue" title="' + result.state + '"></i>';
+                        }
                         content += '<td>' + result.prettyBuildCompletedTime + '</td>';
-                        content += '<td><a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a></td>';
+                        if (result.buildReason.indexOf("Changes") > -1) {
+                            content += '<td>' + result.buildReason + '</td>';
+                            content += '<td id="' + result.vcsRevisionKey + '"><i class="fa fa-spinner fa-spin" class="inner-loader"></i></td>';
+                            $.getJSON(
+                                    "https://api.github.com/repos/GlowstonePlusPlus/GlowstonePlusPlus/commits/" + result.vcsRevisionKey,
+                                    function (data) {
+                                        console.log(data);
+                                        var lines = data.commit.message.split("\n");
+                                        $("#" + data.sha + " .inner-loader").hide();
+                                        if (lines.length > 1) {
+                                            $("#" + data.sha).html(lines[0] + ' <small><em>+ ' + (lines.length - 1) + ' lines</em></small>');
+                                        } else {
+                                            $("#" + data.sha).html(lines[0]);
+                                        }
+                                    }
+                            );
+                        } else {
+                            content += '<td colspan="2">' + result.buildReason + '</td>';
+                        }
                         content += '<td>';
+                        content += '<a href="https://github.com/GlowstonePlusPlus/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
+                        content += '</td><td>';
                         if (result.artifacts.size > 0) {
                             content += '<a href="';
                             content += result.artifacts.artifact[0].link.href;
-                            content += '"><i class="fa fa-download" style="color: green" title="' + result.state + '"></i></a>';
+                            content += '"><i class="fa fa-download" style="color: green"></i></a>';
                         } else {
-                            content += '<i class="fa fa-download" style="color: red" title="' + result.state + '"></i>';
+                            content += '<i class="fa fa-download" style="color: red"></i>';
                         }
                         content += '</td></tr>';
                     });
                     content += '</tbody>';
                     content += '<thead class="thead-inverse"><tr>' +
                             '<th></th>' +
+                            '<th><i class="fa fa-question-circle"></i></th>' +
                             '<th style="width: 11em;">Date (EST)</th>' +
+                            '<th colspan="2">Reason</th>' +
                             '<th><i class="fa fa-github"></i></th>' +
                             '<th><i class="fa fa-download"></i></th>' +
-                            '</tr></thead><tbody></table></div>';
-
+                            '</tr></thead><tbody></table>';
                     $(content).appendTo("#dev-builds");
                     $("#loading-icon").fadeOut(300, function () {
                         $("#builds-table").fadeIn(300)
                     });
-
                     $(function () {
                         $('[data-toggle="tooltip"]').tooltip()
                     });
