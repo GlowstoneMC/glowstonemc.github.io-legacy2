@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Glowstone++</title>
+    <title>Glowstone</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css"
           rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css"
@@ -40,7 +40,7 @@
 <body>
 <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Glowstone++</a>
+        <a class="navbar-brand" href="#">Glowstone</a>
         <ul class="nav navbar-nav pull-right">
             <li class="nav-item">
                 <a class="nav-link"
@@ -52,11 +52,11 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                   href="https://gitter.im/GlowstoneMC/GlowstonePlusPlus">Gitter</a>
+                   href="https://gitter.im/GlowstoneMC/Glowstone">Gitter</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                   href="https://github.com/GlowstoneMC/GlowstonePlusPlus/wiki">Wiki</a>
+                   href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a>
             </li>
         </ul>
     </div>
@@ -66,9 +66,9 @@
         style="background: #FF6F00;color: #fff;height:100%;margin-top:54px">
     <div class="container">
         <h1>Minecraft's future is bright.</h1>
-        <p class="lead"><b>Meet Glowstone++.</b> It's open, fast, and
+        <p class="lead"><b>Meet Glowstone.</b> It's open, fast, and
             compatible.</p>
-        <p>Glowstone++ is a completely open-source Minecraft server that
+        <p>Glowstone is a completely open-source Minecraft server that
             doesn't rely on any of Mojang's code - meaning we're free to
             develop for
             your needs, and you're free to change it however you want.</p>
@@ -81,11 +81,11 @@
             </div>
             <div class="hidden-md-up"><br></div>
             <div class="col-md-6">
-                <a href="https://github.com/GlowstoneMC/GlowstonePlusPlus/wiki/Installation"
+                <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"
                    class="btn btn-success">
                     <i class="fa fa-book fa-fw"></i> Instructions
                 </a>
-                <a href="https://github.com/GlowstoneMC/GlowstonePlusPlus"
+                <a href="https://github.com/GlowstoneMC/Glowstone"
                    class="btn btn-secondary">
                     <i class="fa fa-code-fork fa-fw"></i> Source
                 </a>
@@ -103,10 +103,10 @@
         <div class="card-block">
             <h2 class="card-title">The APIs you know and love</h2>
             <p class="card-text">
-                <span class="lead">Just because Glowstone++ is original doesn't mean it can't be familiar.</span>
+                <span class="lead">Just because Glowstone is original doesn't mean it can't be familiar.</span>
                 <br/>
                 Use or code Bukkit plugins and they'll work natively with
-                Glowstone++, and enjoy first-class Bukkit2Sponge support for
+                Glowstone, and enjoy first-class Bukkit2Sponge support for
                 your Sponge powered plugins.
             </p>
         </div>
@@ -115,7 +115,7 @@
         <div class="card-block">
             <h2 class="card-title">Simplicity is the mother of performance</h2>
             <p class="card-text">
-                <span class="lead">Glowstone++'s simplicity affords it a performance improvement over CraftBukkit and other servers.</span>
+                <span class="lead">Glowstone's simplicity affords it a performance improvement over CraftBukkit and other servers.</span>
                 <br/>
                 By design, our code is simple and doesn't have to jump through
                 hoops
@@ -158,8 +158,8 @@
         <br/>
         <p>
             <small>Made with ♥ by some nerds. Our project is licensed under the
-                MIT license. Glowstone++ would not be possible without <a
-                        href="https://github.com/GlowstoneMC/GlowstonePlusPlus#credits">these
+                MIT license. Glowstone would not be possible without <a
+                        href="https://github.com/GlowstoneMC/Glowstone#credits">these
                     folks</a> &mdash; thanks for your time and passion!
             </small>
         </p>
@@ -201,7 +201,7 @@
                             content += '<td>' + result.buildReason + '</td>';
                             content += '<td id="' + result.vcsRevisionKey + '"><i class="fa fa-spinner fa-spin" class="inner-loader"></i></td>';
                             $.getJSON(
-                                    "https://api.github.com/repos/GlowstoneMC/GlowstonePlusPlus/commits/" + result.vcsRevisionKey,
+                                    "https://api.github.com/repos/GlowstoneMC/Glowstone/commits/" + result.vcsRevisionKey,
                                     function (data) {
                                         console.log(data);
                                         var lines = data.commit.message.split("\n");
@@ -217,7 +217,7 @@
                             content += '<td colspan="2">' + result.buildReason + '</td>';
                         }
                         content += '<td>';
-                        content += '<a href="https://github.com/GlowstoneMC/GlowstonePlusPlus/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
+                        content += '<a href="https://github.com/GlowstoneMC/Glowstone/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
                         content += '</td><td>';
                         if (result.artifacts.size > 0) {
                             content += '<a href="';
