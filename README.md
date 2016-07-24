@@ -1,2 +1,2 @@
-# glowstoneplusplus.github.io
-The GlowstonePlusPlus [website](https://glowstoneplusplus.github.io/)
+# glowstonemc.github.io
+The Glowstone [website](https://glowstoneplusplus.github.io/)
