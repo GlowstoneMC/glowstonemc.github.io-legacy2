@@ -98,29 +98,29 @@
                 <div class="btn-group hidden-md-down" role="group" aria-label="More options">
                     <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"
                        class="btn btn-success">
-                        <i class="fa fa-book fa-fw"></i> Instructions
+                        <span class="fa fa-book fa-fw"></span> Instructions
                     </a>
                     <a href="https://github.com/GlowstoneMC/Glowstone"
                        class="btn btn-secondary">
-                        <i class="fa fa-code-fork fa-fw"></i> Source
+                        <span class="fa fa-code-fork fa-fw"></span> Source
                     </a>
                     <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
                        class="btn btn-secondary">
-                        <i class="fa fa-refresh fa-fw"></i> Builds
+                        <span class="fa fa-refresh fa-fw"></span> Builds
                     </a>
                     </div>
                     <div class="btn-group-vertical hidden-lg-up" role="group" aria-label="More options">
                     <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"
                        class="btn btn-success">
-                        <i class="fa fa-book fa-fw"></i> Instructions
+                        <span class="fa fa-book fa-fw"></span> Instructions
                     </a>
                     <a href="https://github.com/GlowstoneMC/Glowstone"
                        class="btn btn-secondary">
-                        <i class="fa fa-code-fork fa-fw"></i> Source
+                        <span class="fa fa-code-fork fa-fw"></span> Source
                     </a>
                     <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
                        class="btn btn-secondary">
-                        <i class="fa fa-refresh fa-fw"></i> Builds
+                        <span class="fa fa-refresh fa-fw"></span> Builds
                     </a>
                 </div>
             </div>
@@ -204,7 +204,7 @@
 </noscript>
 
 <div class="container" id="dev-builds">
-    <i class="fa fa-spinner fa-spin fa-5x" id="loading-icon"></i>
+    <span class="fa fa-spinner fa-spin fa-5x" id="loading-icon"></span>
 </div>
 
 <footer class="bg-inverse">
@@ -229,14 +229,14 @@
                 function (data) {
                     var content = "";
                     var state;
-                    content += '<table class="table table-hover table-responsive" id="builds-table">';
+                    content += '<div class="table-responsive"><table class="table table-hover" id="builds-table">';
                     content += '<thead class="thead-inverse"><tr>' +
                             '<th></th>' +
-                            '<th><i class="fa fa-question-circle"></i></th>' +
+                            '<th><span class="fa fa-question-circle"></span></th>' +
                             '<th style="width: 11em;">Date (EST)</th>' +
                             '<th colspan="2">Reason</th>' +
-                            '<th><i class="fa fa-github"></i></th>' +
-                            '<th><i class="fa fa-download"></i></th>' +
+                            '<th><span class="fa fa-github"></span></th>' +
+                            '<th><span class="fa fa-download"></span></th>' +
                             '</tr></thead><tbody>';
                     $.each(data.results.result, function (i, result) {
                         if (i > 16) {
@@ -245,16 +245,16 @@
                         state = result.state.toLowerCase();
                         content += '<tr><td> #<a href="https://bamboo.gserv.me/browse/GSPP-SRV-' + result.number + '">' + result.number + '</a></td><td>';
                         if (state == "successful") {
-                            content += '<i class="fa fa-check fa-stack" style="color: green" title="' + result.state + '"></i>';
+                            content += '<span class="fa fa-check fa-stack" style="color: green" title="' + result.state + '"></span>';
                         } else if (state == "failed") {
-                            content += '<i class="fa fa-times fa-stack" style="color: red" title="' + result.state + '"></i>';
+                            content += '<span class="fa fa-times fa-stack" style="color: red" title="' + result.state + '"></span>';
                         } else {
-                            content += '<i class="fa fa-question fa-stack" style="color: blue" title="' + result.state + '"></i>';
+                            content += '<span class="fa fa-question fa-stack" style="color: blue" title="' + result.state + '"></span>';
                         }
                         content += '<td>' + result.prettyBuildCompletedTime + '</td>';
                         if (result.buildReason.indexOf("Changes") > -1) {
                             content += '<td>' + result.buildReason + '</td>';
-                            content += '<td id="' + result.vcsRevisionKey + '"><i class="fa fa-spinner fa-spin" class="inner-loader"></i></td>';
+                            content += '<td id="' + result.vcsRevisionKey + '"><span class="fa fa-spinner fa-spin" class="inner-loader"></span></td>';
                             $.getJSON(
                                     "https://api.github.com/repos/GlowstoneMC/Glowstone/commits/" + result.vcsRevisionKey,
                                     function (data) {
@@ -272,26 +272,26 @@
                             content += '<td colspan="2">' + result.buildReason + '</td>';
                         }
                         content += '<td>';
-                        content += '<a href="https://github.com/GlowstoneMC/Glowstone/commit/' + result.vcsRevisionKey + '"><i class="fa fa-github"></i></a>';
+                        content += '<a href="https://github.com/GlowstoneMC/Glowstone/commit/' + result.vcsRevisionKey + '"><span class="fa fa-github"></span></a>';
                         content += '</td><td>';
                         if (result.artifacts.size > 0) {
                             content += '<a href="';
                             content += result.artifacts.artifact[0].link.href;
-                            content += '"><i class="fa fa-download" style="color: green"></i></a>';
+                            content += '"><span class="fa fa-download" style="color: green"></span></a>';
                         } else {
-                            content += '<i class="fa fa-download" style="color: red"></i>';
+                            content += '<span class="fa fa-download" style="color: red"></span>';
                         }
                         content += '</td></tr>';
                     });
                     content += '</tbody>';
                     content += '<thead class="thead-inverse"><tr>' +
                             '<th></th>' +
-                            '<th><i class="fa fa-question-circle"></i></th>' +
+                            '<th><span class="fa fa-question-circle"></span></th>' +
                             '<th style="width: 11em;">Date (EST)</th>' +
                             '<th colspan="2">Reason</th>' +
-                            '<th><i class="fa fa-github"></i></th>' +
-                            '<th><i class="fa fa-download"></i></th>' +
-                            '</tr></thead><tbody></table>';
+                            '<th><span class="fa fa-github"></span></th>' +
+                            '<th><span class="fa fa-download"></span></th>' +
+                            '</tr></thead><tbody></table></div>';
                     $(content).appendTo("#dev-builds");
                     $("#loading-icon").fadeOut(300, function () {
                         $("#builds-table").fadeIn(300)
