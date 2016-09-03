@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Glowstone</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css"
-          rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css"
-          rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600'
-          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600">
     <style>
         body {
             font-family: 'Source Sans Pro', sans-serif;
@@ -38,10 +35,13 @@
 </head>
 
 <body>
-<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
         <a class="navbar-brand" href="#">Glowstone</a>
-        <ul class="nav navbar-nav pull-right">
+        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapse" aria-controls="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars fa-fw" style="color: #fff"></span>
+        </button>
+        <ul class="nav navbar-nav pull-md-right collapse navbar-toggleable-sm" id="collapse">
             <li class="nav-item">
                 <a class="nav-link"
                    href="https://forums.glowstone.net/">Forums</a>
@@ -73,29 +73,56 @@
             develop for
             your needs, and you're free to change it however you want.</p>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6 text-sm-left text-xs-center">
+                <div class="btn-group hidden-md-down" role="group" aria-label="Downloads">
                 <a href="https://bamboo.gserv.me/browse/GSPP-SRV/latest/artifact/shared/Version-Independent-Server-JAR/glowstone.jar"
-                   class="btn btn-primary"><i class="fa fa-download fa-fw"></i> Download for
+                   class="btn btn-primary"><span class="fa fa-download fa-fw"></span> Download for
                     1.10.2
                 </a>
-                <a href="https://github.com/GlowstoneMC/Glowstone/releases/download/1.9.4/glowstone.-1.9.4-SNAPSHOT.jar"
-                   class="btn btn-info">1.9.4
+                <a href="#downloads"
+                   class="btn btn-info">More downloads
                 </a>
+                </div>
+                <div class="btn-group-vertical hidden-lg-up" role="group" aria-label="Downloads">
+                <a href="https://bamboo.gserv.me/browse/GSPP-SRV/latest/artifact/shared/Version-Independent-Server-JAR/glowstone.jar"
+                   class="btn btn-primary"><span class="fa fa-download fa-fw"></span> Download for
+                    1.10.2
+                </a>
+                <a href="#downloads"
+                   class="btn btn-info">More downloads
+                </a>
+                </div>
             </div>
-            <div class="hidden-md-up"><br></div>
-            <div class="col-md-6">
-                <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"
-                   class="btn btn-success">
-                    <i class="fa fa-book fa-fw"></i> Instructions
-                </a>
-                <a href="https://github.com/GlowstoneMC/Glowstone"
-                   class="btn btn-secondary">
-                    <i class="fa fa-code-fork fa-fw"></i> Source
-                </a>
-                <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
-                   class="btn btn-secondary">
-                    <i class="fa fa-refresh fa-fw"></i> CI Server
-                </a>
+            <div class="hidden-sm-up"><br></div>
+            <div class="col-sm-6 text-xs-center">
+                <div class="btn-group hidden-md-down" role="group" aria-label="More options">
+                    <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"
+                       class="btn btn-success">
+                        <i class="fa fa-book fa-fw"></i> Instructions
+                    </a>
+                    <a href="https://github.com/GlowstoneMC/Glowstone"
+                       class="btn btn-secondary">
+                        <i class="fa fa-code-fork fa-fw"></i> Source
+                    </a>
+                    <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
+                       class="btn btn-secondary">
+                        <i class="fa fa-refresh fa-fw"></i> Builds
+                    </a>
+                    </div>
+                    <div class="btn-group-vertical hidden-lg-up" role="group" aria-label="More options">
+                    <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"
+                       class="btn btn-success">
+                        <i class="fa fa-book fa-fw"></i> Instructions
+                    </a>
+                    <a href="https://github.com/GlowstoneMC/Glowstone"
+                       class="btn btn-secondary">
+                        <i class="fa fa-code-fork fa-fw"></i> Source
+                    </a>
+                    <a href="https://bamboo.gserv.me/browse/GSPP-SRV"
+                       class="btn btn-secondary">
+                        <i class="fa fa-refresh fa-fw"></i> Builds
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -132,13 +159,25 @@
 
 <hr/>
 
-<div class="container">
+
+<section class="container" id="downloads">
+    <h1>Downloads</h1>
+    <h2>Older versions</h2>
+        <div class="btn-group" role="group" aria-label="Old versions">
+            <a href="https://github.com/GlowstoneMC/Glowstone/releases/download/1.9.4/glowstone.-1.9.4-SNAPSHOT.jar"
+               class="btn btn-primary">1.9.x
+            </a>
+            <a href="https://github.com/GlowstoneMC/Glowstone/releases/download/v1.8.9/glowstone.-1.8.9-SNAPSHOT.jar"
+               class="btn btn-primary">1.8.9
+            </a>
+        </div>
+        <br><br>
+    <h2>CI Builds</h2>
     <div class="alert alert-warning" role="alert">
-        <strong>Development builds</strong><br/>
         Note that these builds are for development or testing purposes only,
         and we do not recommend that you use them in production.
     </div>
-</div>
+</section>
 
 <noscript>
     <div class="container">
@@ -147,7 +186,8 @@
             This is a one-page static site, so we require JavaScript to generate
             the table of development builds and commit information below. If you
             would rather head to another page than enable JavaScript, please
-            click on the "CI Server" button in the upper section of the page.
+            <a href="https://bamboo.gserv.me/browse/GSPP-SRV">visit</a>
+            our build server.
         </div>
     </div>
 </noscript>
@@ -160,7 +200,7 @@
     <div class="container">
         <br/>
         <p>
-            <small>Made with ♥ by some nerds. Our project is licensed under the
+            <small style="color: #fff">Made with ♥ by the Glowstone project. Our project is licensed under the
                 MIT license. Glowstone would not be possible without <a
                         href="https://github.com/GlowstoneMC/Glowstone#credits">these
                     folks</a> &mdash; thanks for your time and passion!
@@ -168,8 +208,9 @@
         </p>
     </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 
 <script>
     try {
@@ -253,6 +294,5 @@
         $("<p>" + e.message + "</p>").appendTo("#builds-error");
     }
 </script>
-
 </body>
 </html>
