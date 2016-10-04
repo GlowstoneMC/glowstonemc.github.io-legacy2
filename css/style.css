@@ -1,0 +1,79 @@
+.nav-item img {
+    max-height: 33px;
+    margin-top: 6px;
+}
+.hero.is-primary {
+    background-color: #f7931d;
+    color: white;
+}
+.nav-item a.is-tab.is-active, a.nav-item.is-tab.is-active {
+    border-bottom: 3px solid #f7931d;
+    border-top: 3px solid transparent;
+    color: #f7931d;
+}
+.hero.is-primary .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover {
+    background-color: white;
+    border-color: white;
+    color: #f7931d;
+}
+a .icon-success {
+  color: #7bbf51;
+}
+a .icon-success:hover {
+  color: green;
+}
+a .icon-warning {
+  color: #fbda41;
+}
+a .icon-warning:hover {
+  color: orange;
+}
+.content a:not(.button):hover {
+  border-bottom-color: #f7931d;
+}
+.loader, .button.is-loading:after, .control.is-loading:after {
+  -webkit-animation: spin-around 500ms infinite linear;
+          animation: spin-around 500ms infinite linear;
+  border: 2px solid #f7931d;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+a.nav-item.is-tab:hover {
+  border-bottom: 1px solid #f7931d;
+  border-top: 1px solid transparent;
+}
+.footer {
+  background-color: #f5f7fa;
+  padding: 40px 25px 30px;
+}
+.footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
+  border-bottom-color: #f7931d;
+  color: #f7931d;
+}
+.hero.is-primary .nav-menu {
+    background-color: #f7931d;
+}
+h1 {
+  border-bottom: solid 1px lightgray;
+  padding-bottom: 15px;
+}
+h2 {
+  border-bottom: solid 1px lightgray;
+  padding-bottom: 15px;
+}
+a {
+  color: #f7931d;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: none 86ms ease-out;
+  transition: none 86ms ease-out;
+}
+#instantclick-bar {
+  background: #f5f7fa;
+}

@@ -5,26 +5,27 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>
-      Home &middot; Glowstone
+      News &middot; Glowstone
     </title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bulma.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body id="top" class="layout-documentation page-overview" style="zoom: 1;">
+  <body class="layout-documentation page-overview" style="zoom: 1;">
     <section class="hero is-primary">
       <div class="hero-head">
         <div class="container">
           <nav class="nav">
             <div class="nav-left">
-              <a class="nav-item is-brand" href=""><img alt="Glowstone" src="img/glowstone-text.png" style="margin-left: 10px;"></a>
+              <a class="nav-item is-brand" href="index.html"><img alt="Glowstone" src="img/glowstone-text.png" style="margin-left: 10px;"></a>
             </div>
+
             <div class="nav-center">
               <a class="nav-item" href="https://github.com/GlowstoneMC"><span class="icon"><i class="fa fa-github"></i></span></a> <a class="nav-item" href="https://twitter.com/GlowstoneMC"><span class="icon"><i class="fa fa-twitter"></i></span></a>
             </div>
             <span class="nav-toggle" id="nav-toggle"><span></span> <span></span> <span></span></span>
             <div class="nav-right nav-menu" id="nav-menu">
-              <a class="nav-item" href="https://forums.glowstone.net/">Forums</a> <a class="nav-item" href="https://discord.gg/TFJqhsC">Discord</a> <a class="nav-item is-hidden-touch" href="#" id="irc">IRC</a> <a class="nav-item" href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a> <span class="nav-item"><a class="button is-light is-outlined" href="#downloads"><span class="icon"><i class="fa fa-download"></i></span> <span>Download</span></a></span>
+              <a class="nav-item" href="https://forums.glowstone.net/">Forums</a> <a class="nav-item" href="https://discord.gg/TFJqhsC">Discord</a> <a class="nav-item" href="#" id="irc">IRC</a> <a class="nav-item" href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a> <span class="nav-item"><a class="button is-light is-outlined" href="index.html#downloads"><span class="icon"><i class="fa fa-download"></i></span> <span>Download</span></a></span>
             </div>
           </nav>
         </div>
@@ -38,6 +39,7 @@
                 <img src="img/glowstone-logo.png">
               </figure>
             </div>
+
             <div class="column is-hidden-desktop is-hidden-mobile">
               <figure class="image" style="max-width: 150px;margin-right: 20px;margin-left: 20px;">
                 <img src="img/glowstone-logo.png">
@@ -107,12 +109,12 @@
         <div class="container">
           <nav class="tabs is-boxed">
             <ul>
-              <li class="is-active">
-                <a href="#">Overview</a>
+              <li>
+                <a href="index.html">Overview</a>
               </li>
 
-              <li>
-                <a href="news.html">News</a>
+              <li class="is-active">
+                <a href="#">News</a>
               </li>
             </ul>
           </nav>
@@ -120,128 +122,25 @@
       </div>
     </section>
 
-    <nav class="nav has-shadow" style="padding-left: 1%;">
+    <nav class="nav has-shadow" style="padding-left: 2%;">
       <div class="container">
-        <div class="nav-left">
-          <a class="nav-item is-tab" href="#features">Features</a> <a class="nav-item is-tab" href="#downloads">Downloads</a> <a class="nav-item is-tab" href="#builds">CI Builds</a>
+        <div class="nav-left" style="overflow: hidden;">
+          <a class="nav-item" target="_blank" href="#" id="commit-parent">
+          <div id="commit-details">
+            <span class="loader" style="display: inline-block;"></span> &nbsp; Loading latest commit...
+          </div></a>
         </div>
       </div>
     </nav>
 
     <section class="section">
-      <div class="container" id="features" style="padding-top: 20px;">
-        <h1 class="title is-2">Features<a href="#top"><span class="icon" style="float: right;"><i class="fa fa-angle-up" style="line-height: 60px;font-size:25px;"></i></span></a></h1>
-        <div class="tile is-ancestor" style="text-align: center;">
-          <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title is-4" style="font-size: 20px;">The APIs you know and love</p>
-              <p style="font-size: 110%">Just because Glowstone is original doesn't mean it can't be familiar.</p>
-              <br>
-              <p style="text-align: left;">Use or code Bukkit plugins and they'll work natively with Glowstone, and enjoy first-class Bukkit2Sponge support for your Sponge powered plugins.</p>
-              <br>
-              <a class="button is-outlined" href="https://github.com/GlowstoneMC/Glowstone/wiki/Why-Glowstone" target="_blank">Learn more</a>
-            </div>
-          </div>
-          <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title is-4" style="font-size: 20px;">Simplicity is the mother of performance</p>
-              <p style="font-size: 110%">Glowstone's simplicity affords it a performance improvement over CraftBukkit and other servers.</p>
-              <br>
-              <p style="text-align: left;">
-              By design, our code is simple and doesn't have to work around the official Minecraft server in order to improve performance or functionality.</p>
-              <br>
-              <a class="button is-outlined is-disabled">Benchmarks (Soon)</a>
-            </div>
-          </div>
-          <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title is-4" style="font-size: 20px;">Any way you want it</p>
-              <p style="font-size: 110%">Glowstone is open source and community centric.</p>
-              <br>
-              <p style="text-align: left;">
-              Anyone can work on Glowstone, so it reflects what our community wants. And, with Glowstone's MIT license, you can modify it to suit your server's needs. Don't know code? Provide your input in the design process!</p>
-              <br>
-              <a class="button is-outlined" href="https://github.com/GlowstoneMC/Glowstone/wiki/How-to-Help" target="_blank">How to help</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container" id="downloads" style="padding-top: 20px;">
-        <h1 class="title is-2">Downloads<a href="#top"><span class="icon" style="float: right;"><i class="fa fa-angle-up" style="line-height: 60px;font-size:25px;"></i></span></a></h1>
-        <div class="content">
-          <article class="message is-info">
-            <div class="message-header">
-              How to use
-            </div>
-            <div class="message-body">
-              Glowstone is a standalone Java server executable. You can run it from your terminal:<br>&nbsp;
-              <pre><code>java -Xms512M -Xmx1G -XX:+UseConcMarkSweepGC -jar glowstone.jar</code></pre>
-              <br>
-              You can read more about the installation instructions <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation">here</a>.
-            </div>
-          </article>
-          <br>
-          <div class="columns">
-            <div class="column is-half">
-              <h4 class="title is-4">Latest version</h4>
-              <a class="button is-primary is-medium" style="color: white;" href="https://bamboo.gserv.me/browse/GSPP-SRV/latest/artifact/shared/Version-Independent-Server-JAR/glowstone.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.10.2</span></a>
-              <br><br>
-              <h4 class="title is-5">Snapshots</h4>
-              <p>Bleeding-edge builds for Minecraft snapshots for the next major release.<br>View the source <a href="https://github.com/GlowstoneMC/Glowstone/tree/1.11-snapshots">here</a>.</p>
-              <a class="button is-warning" id="download-snapshot" href="https://251-33457443-gh.circle-artifacts.com/0//tmp/circle-artifacts.tHzq1kg/glowstone++-1.11-16w38a-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 16w38a</span></a>
-              <br><br>
-              <noscript>
-                <article class="message is-warning">
-                  <div class="message-header">
-                    Warning
-                  </div>
-                  <div class="message-body">
-                    <strong>This is a bleeding-edge build.</strong><br>
-                    You may encounter bugs, world corruption and other issues.
-                    <br><br>
-                    <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
-                    <br>
-                  </div>
-                </article>
-              </noscript>
-              <article class="message is-warning" id="download-warning" style="display: none;">
-                <div class="message-header">
-                  Warning
-                </div>
-                <div class="message-body">
-                  <strong>This is a bleeding-edge build.</strong><br>
-                  You may encounter bugs, world corruption and other issues.
-                  <br><br>
-                  <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
-                  <br>
-                </div>
-              </article>
-            </div>
-            <div class="column is-half">
-              <h4 class="title is-4">Previous versions</h4>
-              <p>These versions are no longer supported or developed. They may lack important fixes and features.</p>
-              <h4 class="title is-5">Previous Minecraft versions (not recommended)</h4>
-              <a class="button is-warning" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone/releases/download/1.9.4/glowstone.-1.9.4-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.9.x</span></a>
-              <a class="button is-warning" href="https://github.com/GlowstoneMC/Glowstone/releases/download/v1.8.9/glowstone.-1.8.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.8.9</span></a>
-              <br><br>
-              <h4 class="title is-5">Legacy versions (not recommended)</h4>
-              <p>Legacy builds dating from the pre-Glowstone++ <a href="https://github.com/GlowstoneMC/Glowstone-Legacy">repository</a>.</p>
-              <a class="button is-danger" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone-Legacy/releases/download/1.7.9/glowstone-1.7.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.7.9</span></a>
-              <a class="button is-danger" href="https://github.com/GlowstoneMC/Glowstone-Legacy/releases/download/1.7.2/glowstone-1.7.2-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.7.2</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container" id="builds" style="padding-top: 20px;">
-        <h1 class="title is-2">CI Builds<a href="#top"><span class="icon" style="float: right;"><i class="fa fa-angle-up" style="line-height: 60px;font-size:25px;"></i></span></a></h1>
-        <p>The latest Glowstone builds from our <a href="https://bamboo.gserv.me/browse/GSPP-SRV">build server</a>.</p>
-        <br>
-        <div id="builds-parent">
-          <div class="loader" id="builds-loading" style="margin-top:25px;height:50px;width:50px;margin-bottom:300px;">
+      <div class="container">
+        <h1 class="title is-2">
+          Forum announcements
+        </h1>
+
+        <div id="announcements-parent" style="margin-top:25px;">
+          <div class="loader" id="announcements-loading" style="margin-top:25px;height:50px;width:50px;margin-bottom:300px;">
           </div>
         </div>
       </div>
@@ -301,9 +200,11 @@
     </script>
     <script src="js/bulma.js">
     </script>
-    <script src="js/download.js">
+    <script async src="js/github-commit.js">
     </script>
-    <script src="js/builds.js">
+    <script src="js/timeutil.js">
+    </script>
+    <script async src="js/news-forums.js">
     </script>
     <script src="js/general.js">
     </script>
