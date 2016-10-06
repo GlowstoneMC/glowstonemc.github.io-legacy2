@@ -7,25 +7,36 @@
     <title>
       News &middot; Glowstone
     </title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bulma.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha256-uXf0U0UCIqBp2J3S53b28h+fpC9uFcA8f+b/NNmiwVk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.1/css/bulma.min.css" integrity="sha256-DRcOKg8NK1KkSkcymcGmxOtS/lAn0lHWJXRa15gMHHk=" crossorigin="anonymous" />
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="layout-documentation page-overview" style="zoom: 1;">
+  <body id="top" class="layout-documentation page-overview">
     <section class="hero is-primary">
       <div class="hero-head">
         <div class="container">
           <nav class="nav">
             <div class="nav-left">
-              <a class="nav-item is-brand" href="index.html"><img alt="Glowstone" src="img/glowstone-text.png" style="margin-left: 10px;"></a>
+              <a class="nav-item is-brand" href="/"><img alt="Glowstone" src="img/glowstone-text.png" style="margin-left: 10px"></a>
             </div>
-
             <div class="nav-center">
-              <a class="nav-item" href="https://github.com/GlowstoneMC"><span class="icon"><i class="fa fa-github"></i></span></a> <a class="nav-item" href="https://twitter.com/GlowstoneMC"><span class="icon"><i class="fa fa-twitter"></i></span></a>
+              <a class="nav-item" href="https://github.com/GlowstoneMC">
+                <span class="icon"><span class="fa fa-github"></span></span>
+              </a> 
+              <a class="nav-item" href="https://twitter.com/GlowstoneMC">
+                <span class="icon"><span class="fa fa-twitter"></span></span>
+              </a>
             </div>
             <span class="nav-toggle" id="nav-toggle"><span></span> <span></span> <span></span></span>
             <div class="nav-right nav-menu" id="nav-menu">
-              <a class="nav-item" href="https://forums.glowstone.net/">Forums</a> <a class="nav-item" href="https://discord.gg/TFJqhsC">Discord</a> <a class="nav-item" href="#" id="irc">IRC</a> <a class="nav-item" href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a> <span class="nav-item"><a class="button is-light is-outlined" href="index.html#downloads"><span class="icon"><i class="fa fa-download"></i></span> <span>Download</span></a></span>
+              <a class="nav-item" href="https://forums.glowstone.net/">Forums</a> 
+              <a class="nav-item" href="#" id="chat">Chat</a> 
+              <a class="nav-item" href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a> 
+              <span class="nav-item">
+                <a class="button is-light is-outlined" href="#downloads">
+                  <span class="icon"><span class="fa fa-download"></span></span> <span>Download</span>
+                </a>
+              </span>
             </div>
           </nav>
         </div>
@@ -39,17 +50,16 @@
                 <img src="img/glowstone-logo.png">
               </figure>
             </div>
-
             <div class="column is-hidden-desktop is-hidden-mobile">
-              <figure class="image" style="max-width: 150px;margin-right: 20px;margin-left: 20px;">
+              <figure class="image" style="max-width: 150px;margin-right: 20px;margin-left: 20px">
                 <img src="img/glowstone-logo.png">
               </figure>
             </div>
             <div class="column is-three-quarters">
-              <p class="subtitle" style="margin-bottom: 18px; max-width: 90%; font-size: 30px;">
+              <p class="subtitle" style="margin-bottom: 18px; max-width: 90%; font-size: 30px">
                 <strong>Minecraft's future is bright.</strong>
               </p>
-              <p class="subtitle" style="margin-bottom: 5px;max-width: 90%;font-size: 22px;">
+              <p class="subtitle" style="margin-bottom: 5px;max-width: 90%;font-size: 22px">
                 <strong>Meet Glowstone.</strong> It's open, fast, and compatible.
               </p>
               <p>
@@ -58,46 +68,69 @@
               <br><br>
               <div class="columns is-hidden-touch">
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"><span class="icon"><i class="fa fa-book"></i></span> <span>Instructions</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation">
+                    <span class="icon"><span class="fa fa-book"></span></span> <span>Instructions</span>
+                  </a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone"><span class="icon" style=""><i class="fa fa-code-fork"></i></span> <span>Source Code</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone">
+                    <span class="icon" style=""><span class="fa fa-code-fork"></span></span> <span>Source Code</span>
+                  </a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net"><span class="icon"><i class="fa fa-comments"></i></span> <span>Forums</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net">
+                    <span class="icon"><span class="fa fa-comments"></span></span> <span>Forums</span>
+                  </a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>Javadocs</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="#">
+                    <span class="icon"><span class="fa fa-file-text-o"></span></span> <span>Javadocs</span>
+                  </a>
                 </div>
               </div>
               <div class="columns is-hidden-desktop is-hidden-mobile">
                 <div class="column is-half">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"><span class="icon"><i class="fa fa-book"></i></span> <span>Instructions</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation">
+                    <span class="icon"><span class="fa fa-book"></span></span> <span>Instructions</span>
+                  </a>
                 </div>
                 <div class="column is-half">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net"><span class="icon"><i class="fa fa-comments"></i></span> <span>Forums</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net">
+                    <span class="icon"><span class="fa fa-comments"></span></span> <span>Forums</span>
+                  </a>
                 </div>
               </div>
               <div class="columns is-hidden-desktop is-hidden-mobile">
                 <div class="column is-half">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone"><span class="icon" style=""><i class="fa fa-code-fork"></i></span> <span>Source Code</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone">
+                    <span class="icon" style=""><span class="fa fa-code-fork"></span></span> <span>Source Code</span>
+                  </a>
                 </div>
                 <div class="column is-hakf">
-                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>Javadocs</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="#">
+                    <span class="icon"><span class="fa fa-file-text-o"></span></span> <span>Javadocs</span></a>
                 </div>
               </div>
               <div class="columns is-hidden-desktop is-hidden-tablet">
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation"><span class="icon"><i class="fa fa-book"></i></span> <span>Instructions</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation">
+                    <span class="icon"><span class="fa fa-book"></span></span> <span>Instructions</span>
+                  </a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone"><span class="icon" style=""><i class="fa fa-code-fork"></i></span> <span>Source Code</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone">
+                    <span class="icon" style=""><span class="fa fa-code-fork"></span></span> <span>Source Code</span>
+                  </a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net"><span class="icon"><i class="fa fa-comments"></i></span> <span>Forums</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net">
+                    <span class="icon"><span class="fa fa-comments"></span></span> <span>Forums</span>
+                  </a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>Javadocs</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="#">
+                    <span class="icon"><span class="fa fa-file-text-o"></span></span> <span>Javadocs</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -105,7 +138,7 @@
         </div>
       </div>
 
-      <div class="hero-foot" style="padding-left: 1%;">
+      <div class="hero-foot" style="padding-left: 1%">
         <div class="container">
           <nav class="tabs is-boxed">
             <ul>
@@ -122,12 +155,12 @@
       </div>
     </section>
 
-    <nav class="nav has-shadow" style="padding-left: 2%;">
+    <nav class="nav has-shadow" style="padding-left: 2%">
       <div class="container">
-        <div class="nav-left" style="overflow: hidden;">
+        <div class="nav-left" style="overflow: hidden">
           <a class="nav-item" target="_blank" href="#" id="commit-parent">
           <div id="commit-details">
-            <span class="loader" style="display: inline-block;"></span> &nbsp; Loading latest commit...
+            <span class="loader" style="display: inline-block"></span> &nbsp; Loading latest commit...
           </div></a>
         </div>
       </div>
@@ -156,45 +189,42 @@
             Glowstone would not be possible without <a target="_blank" href="https://github.com/GlowstoneMC/Glowstone#credits">these folks</a> — thanks for your time and passion!
           </p>
           <div>
-            <iframe class="github-btn" frameborder="0" height="20px" scrolling="0" src="https://ghbtns.com/github-btn.html?user=GlowstoneMC&amp;repo=Glowstone&amp;type=star&amp;count=true" width="85px"></iframe>&nbsp;
-            <a href="https://discord.gg/TFJqhsC" target="_blank" style="border: none;"><img src="https://img.shields.io/badge/discord-glowstone-738bd7.svg?style=flat-square"></a>&nbsp;
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20%40GlowstoneMC%27s%20new%20website%21">Tweet</a>&nbsp;
+            <a aria-label="Star GlowstoneMC/Glowstone on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api="/repos/GlowstoneMC/Glowstone#stargazers_count" data-count-href="/GlowstoneMC/Glowstone/stargazers" data-style="mega" data-icon="octicon-star" href="https://github.com/GlowstoneMC/Glowstone" class="github-button">Star</a>&nbsp;
+            <a href="https://discord.gg/TFJqhsC" target="_blank" style="border: none"><img src="https://img.shields.io/badge/discord-glowstone-738bd7.svg?style=flat-square"></a>&nbsp;
           </div>
         </div>
       </div>
     </footer>
 
-    <div class="modal" style="display: none;" id="ircModal">
-      <div class="modal-background" id="ircModalBack"></div>
+    <div class="modal" style="display: none;" id="chatModal">
+      <div class="modal-background" id="chatModalBack"></div>
       <div class="modal-card" style="top:10vh;">
-        <p style="margin-top:20px; margin-left:20px;"><span style="padding-top:100px;"class="title is-3">Joining using an IRC client</span> <button class="delete" id="ircModalClose" style="float:right;margin-right:10px;"></button></p>
+        <p style="margin-top:20px; margin-left:20px;"> <button class="delete" id="chatModalClose" style="float:right;margin-right:10px;"></button></p>
         <section class="modal-card-body" style="padding-bottom:30px;">
-          <p>Connect to EsperNet using your preferred IRC client, and join the <code>#glowstone</code> channel.</p>
-          <p class="control has-addons" style="margin-top:10px;">
-            <input class="input" onClick="this.select();" style="width: 50%;" type="text" value="irc.esper.net" readonly>
-            <a class="button" href="irc://irc.esper.net">
-              <i class="fa fa-external-link" style="font-size:13px;"></i>
-            </a>
-          </p>
-          <hr>
-          <p style="margin-top:-15px;"class="title is-3">Joining IRC via Webchat</p>
-          <p>Alternatively, you can connect to our IRC channel in your browser via <a href="https://webchat.esper.net/?nick=webchat-.....&channels=glowstone">webchat</a>.</p>
-        </p>
-        <hr>
-        <p style="margin-top:-15px;"class="title is-3">Not a fan of IRC? Join <a href="https://discordapp.com" target="_blank">Discord</a>!</p>
-        <p>You can also join our Discord server! Simply create an account and join our guild using the invitation link:</p>
-        <p class="control has-addons" style="margin-top:10px;">
+        <p class="title is-3">Join <a href="https://discordapp.com" target="_blank">Discord</a>!</p>
+        <p>Simply create an account and join our server using the invitation link:</p>
+        <p class="control has-addons" style="padding-top:20px;">
           <input class="input" onClick="this.select();" style="width: 50%;" type="text" value="https://discord.gg/TFJqhsC" readonly>
           <a class="button" href="https://discord.gg/TFJqhsC">
-            <i class="fa fa-external-link" style="font-size:13px;"></i>
+            <span class="fa fa-external-link" style="font-size:13px;"></span>
           </a>
         </p>
+        <hr>
+        <p class="title is-5">More of an IRC person?</p>
+        <p>Connect to EsperNet using your preferred IRC client, and join the <code>#glowstone</code> channel.</p>
+        <p class="control has-addons" style="margin-top:10px;">
+          <input class="input" onClick="this.select();" style="width: 50%;" type="text" value="irc.esper.net" readonly>
+          <a class="button" href="irc://irc.esper.net">
+            <span class="fa fa-external-link" style="font-size:13px;"></span>
+          </a>
+        </p>
+        <hr>
         </section>
       </div>
     </div>
-    <script src="js/jquery-2.2.0.min.js">
-    </script>
-    <script charset="utf-8" src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js" integrity="sha256-YPxFEfHAzLj9n2T+2UXAKGNCRUINk0BexppujiVhRH0=" crossorigin="anonymous"></script>
     </script>
     <script src="js/proxy.js">
     </script>
@@ -208,26 +238,8 @@
     </script>
     <script src="js/general.js">
     </script>
-    <!-- Twitter -->
-    <script>
-      window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-          t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-
-        t._e = [];
-        t.ready = function(f) {
-          t._e.push(f);
-        };
-
-        return t;
-      }(document, "script", "twitter-wjs"));
-    </script>
-    <script src="js/instantclick.min.js" data-no-instant></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" integrity="sha256-SVgP0duWZXZFPVIX+woWPFhpnHcxG5IXS6zvZAVoa3Y=" crossorigin="anonymous" data-no-instant></script>
     <script data-no-instant>InstantClick.init();</script>
   </body>
 </html>

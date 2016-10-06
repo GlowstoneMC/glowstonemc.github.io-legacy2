@@ -10,13 +10,13 @@ $(document).ready(function(){
       });
     }
   });
-  $("#irc").on('click', function(event) {
-    $("#ircModal").fadeIn(400);
+  $("#chat").on('click', function(event) {
+    $("#chatModal").fadeIn(400);
   });
-  $("#ircModalClose").on('click', function(event){
-    $("#ircModal").fadeOut(300);
+  $("#chatModalClose").on('click', function(event){
+    $("#chatModal").fadeOut(300);
   });
-  $("#ircModalBack").on('click', function(event){
-    $("#ircModal").fadeOut(300);
+  $("#chatModalBack").on('click', function(event){
+    $("#chatModal").fadeOut(300);
   });
 });
