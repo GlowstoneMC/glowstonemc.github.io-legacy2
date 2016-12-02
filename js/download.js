@@ -15,6 +15,8 @@ $(function() {
       download(dl, true);
     });
   }
+  // Uncomment this part when circle download is required
+  /*
   {
     var circle = $("#download-latest-circle").attr("href");
     $.getJSON({
@@ -26,4 +28,5 @@ $(function() {
       }
     });
   }
+  */
 });
