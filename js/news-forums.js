@@ -50,7 +50,7 @@ function loadAnnouncementsFront(count) {
     }
     var build = "";
     for (var i = 0; i < count; i++) {
-      build += '<a class="announcement-link" href="https://forums.glowstone.net/topic/' + topics[i].slug + '">' + topics[i].title + '</a>';
+      build += '<a class="announcement-link" target="_blank" href="https://forums.glowstone.net/topic/' + topics[i].slug + '">' + topics[i].title + '</a>';
       if (i < (count - 1)) {
         build += ", ";
       }
