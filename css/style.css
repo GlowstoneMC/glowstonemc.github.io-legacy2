@@ -74,6 +74,12 @@ a {
   -webkit-transition: none 86ms ease-out;
   transition: none 86ms ease-out;
 }
+.announcement-link {
+  color: #3273dc;
+}
+.announcement-link :hover {
+  color: black;
+}
 #instantclick-bar {
   background: #f5f7fa;
 }

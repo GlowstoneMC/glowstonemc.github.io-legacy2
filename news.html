@@ -179,7 +179,7 @@
         </div>
         <br>
         <div class="has-text-centered" id="announcements-more" style="display: none">
-          <a class="button is-outlined" style="color: #b5b5b5" target="_blank" href="https://forums.glowstone.net/category/12/announcements">
+          <a class="button is-outlined" href="https://forums.glowstone.net/category/12/announcements">
             View more announcements &nbsp; <i class="fa fa-bullhorn"></i>
           </a>
         </div>
@@ -241,7 +241,12 @@
     </script>
     <script src="js/timeutil.js">
     </script>
-    <script async src="js/news-forums.js">
+    <script src="js/news-forums.js">
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        loadNews();
+      });
     </script>
     <script src="js/general.js">
     </script>

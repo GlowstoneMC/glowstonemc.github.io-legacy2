@@ -164,6 +164,13 @@
     </nav>
 
     <section class="section">
+      <div class="container" style="display: none;" id="announcements-front">
+        <article class="message is-info">
+          <div class="message-body" style="color: #3273dc;">
+            <strong><i class="fa fa-bullhorn"></i> Latest announcements:</strong> <span id="announcements-titles"></span>
+          </div>
+        </article>
+      </div>
       <div class="container" id="features" style="padding-top: 20px;">
         <h1 class="title is-2">Features<a href="#top"><span class="icon" style="float: right;"><i class="fa fa-angle-up" style="line-height: 60px;font-size:25px;"></i></span></a></h1>
         <div class="tile is-ancestor" style="text-align: center;">
@@ -347,6 +354,11 @@
     <script src="js/builds.js">
     </script>
     <script src="js/general.js">
+    </script>
+    <script src="js/news-forums.js">
+    </script>
+    <script type="text/javascript">
+      loadAnnouncementsFront(3);
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" integrity="sha256-SVgP0duWZXZFPVIX+woWPFhpnHcxG5IXS6zvZAVoa3Y=" crossorigin="anonymous" data-no-instant></script>
