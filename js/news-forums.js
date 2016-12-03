@@ -50,7 +50,8 @@ function loadAnnouncementsFront(count) {
     }
     var build = "";
     for (var i = 0; i < count; i++) {
-      build += '<a class="announcement-link" target="_blank" href="https://forums.glowstone.net/topic/' + topics[i].slug + '">' + topics[i].title + '</a>';
+      var date = timeDifference(new Date().getTime(), topics[i].timestamp);
+      build += '<a class="announcement-link" target="_blank" data-balloon="' + date + '" data-balloon-pos="up"href="https://forums.glowstone.net/topic/' + topics[i].slug + '">' + topics[i].title + '</a>';
       if (i < (count - 1)) {
         build += ", ";
       }
