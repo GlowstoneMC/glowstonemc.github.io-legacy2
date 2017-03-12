@@ -83,3 +83,8 @@ a {
 #instantclick-bar {
   background: #f5f7fa;
 }
+#sponsors img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 9px;
+}
