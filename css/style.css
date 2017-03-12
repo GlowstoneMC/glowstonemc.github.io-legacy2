@@ -88,3 +88,15 @@ a {
     max-height: 300px;
     margin: 9px;
 }
+.is-grey {
+    background-color: #f5f7fa;
+    color: #f7931d;
+}
+
+.is-grey .container h1 {
+    color: #f7931d;
+}
+
+.is-grey hr {
+    background-color: #f7931d;
+}
