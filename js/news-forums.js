@@ -27,7 +27,7 @@ function loadNews() {
           var comments = topic.posts.length - 1;
           var content = topic.posts[0].content.replace("\\n", "");
           var title = topic.title;
-          topicArray['<div class="content box"><h2>' + title + '<a class="button is-outlined" style="float: right" href="' + topicurl + '">View post</a><br><h5>Posted by ' + author + ' <strong id="datetest">' + date + '</strong>, ' + comments + ' comment' + (comments === 1 ? "" : "s") + '</h5></h2>' + content + '</div>'] = timestamp;
+          topicArray['<div class="content box"><h2><a style="color: black" href="' + topicurl + '">' + title + '</a><br><h5>Posted by ' + author + ' <strong id="datetest">' + date + '</strong>, ' + comments + ' comment' + (comments === 1 ? "" : "s") + '</h5></h2>' + content + '</div>'] = timestamp;
       }});
     }
   }).complete(function() {
@@ -49,6 +49,7 @@ function loadAnnouncementsFront(count) {
       }
       topics[index++] = data.topics[i];
     }
+    topics = _.sortBy(topics, "timestamp").reverse();
     var build = "";
     for (var i = 0; i < count; i++) {
       var date = timeDifference(new Date().getTime(), topics[i].timestamp);
