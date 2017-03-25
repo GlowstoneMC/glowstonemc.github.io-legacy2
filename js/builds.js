@@ -18,7 +18,7 @@ $(function() {
     var model =
     '<tr>' +
       '<td>{buildnumber}</td>' +
-      '<td>{date}</td>' +
+      '<td title="{absolute}">{date}</td>' +
       '<td>{version}</td>' +
       '<td>{reason}</td>' +
       '<td>{download}</td>' +
@@ -36,6 +36,7 @@ $(function() {
       }
       var reason = b.buildReason;
       var date = b.buildRelativeTime;
+      var absoluteDate = b.prettyBuildCompletedTime;
       if (b.buildReason.includes("Manual run ")) {
         reason = b.buildReason;
       } else if ("vcsRevisionKey" in b) {
@@ -56,7 +57,7 @@ $(function() {
           download = '<a href="' + b.artifacts.artifact[0].link.href + '"><span class="icon icon-warning"><i class="fa fa-download"></i></span></a>';
         }
       }
-      content += model.replace("{buildnumber}", buildnumber).replace("{date}", date).replace("{reason}", reason).replace("{download}", download).replace("{version}", version);
+      content += model.replace("{buildnumber}", buildnumber).replace("{date}", date).replace("{reason}", reason).replace("{download}", download).replace("{version}", version).replace("{absolute}", absoluteDate);
     }
     $("#builds-parent").html(base.replace("{builds}", content));
   });
