@@ -10,6 +10,7 @@ function loadNews() {
       }
       topics[index++] = data.topics[i];
     }
+    topics = _.sortBy(topics, "timestamp").reverse();
     for (var i = 0; i < 5; i++) {
       var t = topics[i];
       var html = "";
