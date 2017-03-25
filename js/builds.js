@@ -40,7 +40,11 @@ $(function() {
       if (b.buildReason.includes("Manual run ")) {
         reason = b.buildReason;
       } else if ("vcsRevisionKey" in b) {
-        reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><code>' + b.vcsRevisionKey.substr(0, 7) + '</code></a>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "");
+        if (b.buildReason.includes("Rebuilt ")) {
+          reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><code>' + b.vcsRevisionKey.substr(0, 7) + '</code></a>&nbsp;&nbsp;<span style="color: gray">(Rebuilt)</span>';
+        } else {
+          reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><code>' + b.vcsRevisionKey.substr(0, 7) + '</code></a>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "");
+        }
       }
       var version = '<span style="color: gray">N/A</span>';
       if (b.labels.size > 0) {
