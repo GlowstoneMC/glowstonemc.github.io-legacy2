@@ -236,7 +236,7 @@
             </div>
             <div class="message-body">
               Glowstone is a standalone Java server executable. You can run it from your terminal:<br>&nbsp;
-              <pre><code>java -Xms512M -Xmx1G -XX:+UseConcMarkSweepGC -jar glowstone.jar</code></pre>
+              <pre><code>java -Xms1G -Xmx1G -XX:+UseG1GC -XX:MaxGCPauseMillis=30 -jar glowstone.jar</code></pre>
               <br>
               You can read more about the installation instructions <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation">here</a>.
               <br><br>
