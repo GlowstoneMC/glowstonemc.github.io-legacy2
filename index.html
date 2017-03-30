@@ -255,26 +255,16 @@
               <h4 class="title is-4">Latest version</h4>
               <a class="button is-primary is-medium" style="color: white;" href="https://bamboo.gserv.me/artifact/GSPP-SRV/shared/build-latestSuccessful/Version-Independent-Server-JAR/glowstone.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.11.2</span></a>
               <br><br>
-              <noscript>
-                <article class="message is-warning">
-                  <div class="message-header">
-                    Warning
-                  </div>
-                  <div class="message-body">
-                    <strong>This is a bleeding-edge build.</strong><br>
-                    You may encounter crashes, world corruption and other issues.
-                    <br><br>
-                    <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
-                    <br>
-                  </div>
-                </article>
-              </noscript>
-              <article class="message is-warning" id="download-warning" style="display: none;">
+              <h4 class="title is-5">Snapshot build</h4>
+              <p>A bleeding-edge build for Minecraft snapshots of the upcoming major release.</p>
+              <a class="button is-warning" id="snapshot"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 17w13a (1.12)</span></a>
+              <br><br>
+              <article class="message is-warning" style="display: none;">
                 <div class="message-header">
                   Warning
                 </div>
                 <div class="message-body">
-                  <strong>This is a bleeding-edge build.</strong><br>
+                  <strong>This is a snapshot build.</strong><br>
                   You may encounter crashes, world corruption and other issues.
                   <br><br>
                   <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
@@ -365,6 +355,30 @@
           </a>
         </p>
         <hr>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal" style="display: none;" id="snapshotModal">
+      <div class="modal-background" id="snapshotModalBack"></div>
+      <div class="modal-card" style="top:10vh;">
+        <p style="margin-top:20px; margin-left:20px;"> <button class="delete" id="snapshotModalClose" style="float:right;margin-right:10px;"></button></p>
+        <section class="modal-card-body" style="padding-bottom:30px;">
+        <p class="title is-3">Download warning</p>
+        <p><strong>You are about to download a build compatible with Minecraft snapshots.</strong></p>
+        <hr>
+        <p>
+          You may encounter crashes, world corruption and other issues. <strong>We are not responsible for the potential loss of data on your server when using Glowstone, and these builds present a larger risk.</strong>
+        </p>
+        <br>
+        <p>
+          Please backup your worlds, config and other files before using this bleeding-edge build.
+        </p>
+        <br>
+        <p style="text-align: center">
+          <a class="button is-warning" href="http://bamboo.gserv.me/browse/GSPP-SRV49/latestSuccessful/artifact/shared/Version-Independent-Server-JAR/glowstone.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Proceed with download</span></a>
+
+        </p>
         </section>
       </div>
     </div>
