@@ -10,6 +10,11 @@ $(document).ready(function(){
       });
     }
   });
+  $("#warning-link").on('click', function(event) {
+    $('html, body').animate({
+      scrollTop: $("#warning-feature-completeness").offset().top - 5
+    }, 1000);
+  });
   $("#chat").on('click', function(event) {
     $("#chatModal").fadeIn(400);
   });
