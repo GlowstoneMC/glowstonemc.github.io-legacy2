@@ -13,6 +13,9 @@ $(document).ready(function(){
   $("#chat").on('click', function(event) {
     $("#chatModal").fadeIn(400);
   });
+  $("#warning-chat-link").on('click', function(event) {
+    $("#chatModal").fadeIn(400);
+  });
   $("#chatModalClose").on('click', function(event){
     $("#chatModal").fadeOut(300);
   });
